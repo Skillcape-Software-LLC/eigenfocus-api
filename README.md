@@ -2,7 +2,7 @@
 
 A read/write [.NET 8 Minimal API](https://learn.microsoft.com/aspnet/core/fundamentals/minimal-apis) that puts an HTTP surface in front of your existing [Eigenfocus](https://eigenfocus.com/) SQLite database.
 
-> **Independent third-party integration.** This project is **not** sponsored by, affiliated with, partnered with, or endorsed by Eigenfocus or its maintainers. It is an unofficial utility built by [Skillcape Software](https://skillcape.software) to read and write data in an Eigenfocus install you already operate. "Eigenfocus" is the property of its respective owner.
+> **Independent third-party integration.** This project is **not** sponsored by, affiliated with, partnered with, or endorsed by Eigenfocus or its maintainers. It is an unofficial utility built by [Skillcape Software](https://skillcapesoftware.com) to read and write data in an Eigenfocus install you already operate. "Eigenfocus" is the property of its respective owner.
 >
 > Tested against **Eigenfocus Pro 1.4.0**.
 
@@ -90,6 +90,10 @@ To control upgrades, change the `image:` line in your `compose.yml` to the tag y
 docker compose pull
 docker compose up -d
 ```
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE). Copyright © 2026 Skillcape Software LLC.
 
 ## Links
 
