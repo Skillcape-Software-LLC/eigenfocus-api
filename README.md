@@ -2,7 +2,7 @@
 
 A read/write [.NET 8 Minimal API](https://learn.microsoft.com/aspnet/core/fundamentals/minimal-apis) that wraps an existing [Eigenfocus](https://eigenfocus.com/) SQLite database. The schema is owned by the upstream Rails app — this service exposes a focused HTTP surface (issues, comments, projects, users, custom fields) for integrations that need to read or mutate Eigenfocus data without going through the web UI.
 
-For the full endpoint contract see **[API_Documentation.md](API_Documentation.md)**.
+For the full endpoint contract see **[API_Documentation.md](API_Documentation.md)**. Supported Eigenfocus version: pro-edition:1.4.0 
 
 ## Quick start (Docker)
 

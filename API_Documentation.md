@@ -30,7 +30,7 @@ X-API-Key: <your-key>
 # compose.yml
 environment:
   - ApiKey=your-secret-key-here
-  - ConnectionStrings__DefaultConnection=Data Source=/data/production.sqlite3;Mode=ReadWrite;Cache=Shared;Journal Mode=WAL
+  - ConnectionStrings__DefaultConnection=Data Source=/data/database/production.sqlite3;Mode=ReadWrite;Cache=Shared;Journal Mode=WAL
 ```
 
 Middleware rejects missing or invalid keys with `401 Unauthorized`.

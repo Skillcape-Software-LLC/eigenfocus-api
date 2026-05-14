@@ -38,6 +38,11 @@ public sealed class DbConnectionFactory : IDbConnectionFactory
     {
         var conn = new SqliteConnection(_connectionString);
         conn.Open();
+        using (var cmd = conn.CreateCommand())
+        {
+            cmd.CommandText = "PRAGMA journal_mode=WAL;";
+            cmd.ExecuteNonQuery();
+        }
         return conn;
     }
 }

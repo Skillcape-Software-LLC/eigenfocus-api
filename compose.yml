@@ -1,13 +1,12 @@
 services:
   eigenfocus-api:
-    build: .
-    image: eigenfocus-api:local
+    image: ghcr.io/skillcape-software-llc/eigenfocus-api:latest
     container_name: eigenfocus-api
     restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
       - ApiKey=your-secret-key-here
-      - ConnectionStrings__DefaultConnection=Data Source=/data/production.sqlite3;Mode=ReadWrite;Cache=Shared;Journal Mode=WAL
+      - ConnectionStrings__DefaultConnection=Data Source=/data/database/production.sqlite3;Mode=ReadWrite;Cache=Shared
     volumes:
-      - ./data:/data
+      - ./app-data:/data

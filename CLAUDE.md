@@ -20,7 +20,7 @@ A read/write .NET 8 Minimal API that wraps an existing Eigenfocus SQLite databas
 - `dotnet run` — run locally. Requires `ApiKey` and `ConnectionStrings:DefaultConnection` to be set (via `appsettings.Development.json`, user-secrets, or environment variables — `appsettings.json` ships with `ApiKey=""` and a `/data/...` connection string intended for the container).
 - `docker compose up --build` — build the image and run the container. `compose.yml` mounts `./data` to `/data` and sets `ApiKey` + connection string via environment. Edit `compose.yml` before running — the committed `ApiKey` value is a placeholder.
 
-The connection string should include `Journal Mode=WAL` so the API does not block Rails writers (see `compose.yml:11`).
+The factory issues `PRAGMA journal_mode=WAL;` on every opened connection (`src/Data/DbConnectionFactory.cs`) so the API does not block Rails writers. Do **not** add `Journal Mode=WAL` to the connection string — `Microsoft.Data.Sqlite` rejects that keyword.
 
 ### Test
 
