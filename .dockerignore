@@ -1,0 +1,15 @@
+bin
+obj
+out
+.vs
+.vscode
+.idea
+.git
+.gitignore
+*.user
+*.md
+data
+*.sqlite3
+*.sqlite3-*
+appsettings.Development.json
+appsettings.Local.json

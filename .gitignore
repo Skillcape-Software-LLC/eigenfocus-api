@@ -1,0 +1,33 @@
+## .NET
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/
+.idea/
+
+## Build artifacts
+*.dll
+*.pdb
+*.exe
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Local config / secrets
+appsettings.Development.json
+appsettings.Local.json
+*.env
+.env
+.env.*
+
+## Data
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+/data/

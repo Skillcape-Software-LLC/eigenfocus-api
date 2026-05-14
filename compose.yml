@@ -1,0 +1,13 @@
+services:
+  eigenfocus-api:
+    build: .
+    image: eigenfocus-api:local
+    container_name: eigenfocus-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - ApiKey=your-secret-key-here
+      - ConnectionStrings__DefaultConnection=Data Source=/data/production.sqlite3;Mode=ReadWrite;Cache=Shared;Journal Mode=WAL
+    volumes:
+      - ./data:/data
