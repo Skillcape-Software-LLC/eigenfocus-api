@@ -62,7 +62,7 @@ public static class ReadEndpoints
             return ApiResults.NotFound($"Project {id} does not exist.");
         var rows = await conn.QueryAsync<IssueStatus>(
             @"SELECT id, name, project_id, initial, final
-              FROM issue_statuses WHERE project_id = @id ORDER BY position",
+              FROM issue_statuses WHERE project_id = @id ORDER BY id",
             new { id });
         return Results.Ok(rows);
     }
